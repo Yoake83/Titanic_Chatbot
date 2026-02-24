@@ -10,5 +10,5 @@ langchain-community==0.2.5
 langchain-experimental==0.0.61
 requests>=2.32.3
 python-multipart>=0.0.9
-numpy>=2.0.0
+numpy>=1.26.4,<2.0.0
 pillow>=11.0.0
