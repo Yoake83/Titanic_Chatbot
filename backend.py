@@ -348,7 +348,7 @@ def build_agent():
         return None
     
     llm = ChatGroq(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         groq_api_key=api_key,
         temperature=0,
         max_tokens=4096,
