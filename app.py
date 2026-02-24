@@ -11,6 +11,13 @@ import streamlit as st
 import requests
 from PIL import Image
 
+
+# Load from Streamlit secrets if available
+if hasattr(st, "secrets"):
+    if "GROQ_API_KEY" in st.secrets:
+        os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+    if "BACKEND_URL" in st.secrets:
+        os.environ["BACKEND_URL"] = st.secrets["BACKEND_URL"]
 # ── Config ────────────────────────────────────────────────────────────────────
 BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:8000")
 
